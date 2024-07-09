@@ -8,7 +8,7 @@ if(isset($_POST['id'])) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
 
     // Fetch user details from the database
-    $sql = "SELECT a.*, b.* FROM user_tbl AS a LEFT JOIN admin AS b ON a.admin_id=b.admin_id WHERE a.user_id = '$id'";
+    $sql = "SELECT a.*, b.* FROM user_tbl AS a LEFT JOIN admin AS b ON a.admin_id=b.admin_id WHERE a.user_id = 'admin_id'";
     $result = mysqli_query($conn, $sql);
 
     if($result && mysqli_num_rows($result) > 0) {
